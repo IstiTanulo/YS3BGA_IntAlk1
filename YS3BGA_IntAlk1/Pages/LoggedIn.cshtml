@@ -1,0 +1,13 @@
+﻿@page
+@model LoggedInModel
+@{
+    ViewData["Title"] = "Logged In";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome, @Model.Username!</h1>
+    <p>You have successfully logged in.</p>
+    <form method="post">
+        <button type="submit" asp-page-handler="Logout">Logout</button>
+    </form>
+</div>
