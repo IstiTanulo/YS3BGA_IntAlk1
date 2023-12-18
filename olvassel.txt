@@ -1,3 +1,15 @@
-Az adatbáziskapcsolat útvonal beállítása a projectben jelenleg, ami több helyen is szerepel: 
+- Amennyiben az adatbázis létrehozó YS3BGA_IntAlk1_db.sql script nem futtatható le egyben, úgy két lépésben, két részre bontva kell végezni: 
+1.: REATE DATABASE YS3BGA_IntAlk1_db;
+2.: USE YS3BGA_IntAlk1_db;
+CREATE TABLE clients (
+    id INT NOT NULL PRIMARY KEY IDENTITY,
+    name VARCHAR (100) NOT NULL,
+    email VARCHAR (150) NOT NULL UNIQUE,
+    phone VARCHAR(20) NULL,
+    address VARCHAR(100) NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+- Az adatbázis kapcsolat útvonal beállítása a projectben jelenleg, ami több helyen is szerepel: 
 String connectionString = "Data Source=.\\sqlexpress;Initial Catalog=YS3BGA_IntAlk1_db;Integrated Security=True;Encrypt=False"; 
 Ez más gépen változhat, így a HF teljeskörű működéséhez ezen soroknál a helyi adatbázis connectionString beírása javasolt. Ennek további szerkesztésére is szükség lehet. 
