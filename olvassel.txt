@@ -1,0 +1,3 @@
+Az adatbáziskapcsolat útvonal beállítása a projectben jelenleg, ami több helyen is szerepel: 
+String connectionString = "Data Source=.\\sqlexpress;Initial Catalog=YS3BGA_IntAlk1_db;Integrated Security=True;Encrypt=False"; 
+Ez más gépen változhat, így a HF teljeskörű működéséhez ezen soroknál a helyi adatbázis connectionString beírása javasolt. Ennek további szerkesztésére is szükség lehet. 
